@@ -49,7 +49,7 @@
                     android:gravity="center_vertical"
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp"
-                    android:text="Credit Scoring"
+                    android:text="Credit Scoring Simulation"
                     android:textColor="@color/textMandiri"
                     android:textSize="16sp"
                     android:fontFamily="@font/nunito_semibold"
@@ -63,23 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"/>
 
-            <TextView
-                    android:gravity="center_vertical"
-                    android:paddingStart="24dp"
-                    android:paddingEnd="24dp"
-                    android:text="Kalkulator PPH UMKM"
-                    android:textColor="@color/textMandiri"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/nunito_semibold"
-                    android:id="@+id/kalkulatorpph"
-                    android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize"/>
-            <View
-                    android:background="#ececec"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"/>
+
         </LinearLayout>
     </ScrollView>
 
