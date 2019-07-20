@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".kasir.order.OrderKasirActivity">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="95dp"
+                android:layout_height="match_parent">
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/view_header"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/shape_home_header"/>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:adjustViewBounds="false"
+                    android:src="@drawable/background_header_home"
+                    android:layout_height="wrap_content"/>
+
+
+            <ImageView
+                android:id="@+id/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintTop_toTopOf="@id/text_name"
+                app:layout_constraintBottom_toBottomOf="@id/text_name"
+                android:layout_marginStart="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/text_name"
+                android:textSize="20sp"
+                android:layout_marginBottom="30dp"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Order"
+                android:textColor="#ffffff"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="14dp"
+                app:layout_constraintBottom_toTopOf="@id/recycler_kategori"
+                app:layout_constraintStart_toEndOf="@id/ic_back"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_kategori"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="18dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_header"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"/>
+
+
+            <TextView android:layout_width="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/view_header"
+                      android:id="@+id/text_kateg"
+                      android:textSize="20sp"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginStart="20dp"
+                      android:fontFamily="@font/nunito_extrabold"
+                      android:text="All"
+                      android:layout_gravity="center_vertical"
+                      android:includeFontPadding="false"
+                      android:textColor="@color/textInputUser"
+                      android:ellipsize="end"
+                      android:maxLines="1"
+                      android:layout_height="wrap_content"/>
+            <FrameLayout
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_kateg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp">
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_orderproduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                <include
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        layout="@layout/partial_progress_paging"/>
+            </FrameLayout>
+
+        </android.support.constraint.ConstraintLayout>
+        <include
+            layout="@layout/fragment_bottomsheet_order"/>
+        <android.support.constraint.ConstraintLayout
+            android:background="#ffffff"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <TextView
+                app:layout_constraintEnd_toStartOf="@id/card_savebill"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@id/text_amount"
+                android:layout_width="0dp"
+                android:textSize="10sp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Total Amount"
+                android:layout_marginStart="20dp"
+                android:includeFontPadding="false"
+                android:textColor="#888383"
+                android:ellipsize="end"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:maxLines="1"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintEnd_toStartOf="@id/card_savebill"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="0dp"
+                android:id="@+id/text_amount"
+                android:textSize="15sp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/loading"
+                android:layout_marginStart="20dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/textInputUser"
+                android:ellipsize="end"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:maxLines="1"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:id="@+id/card_savebill"
+                android:layout_width="40dp"
+                android:background="@drawable/shape_order_cardsave"
+                app:layout_constraintEnd_toStartOf="@id/button_checkout"
+                app:layout_constraintBottom_toBottomOf="@id/button_checkout"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="40dp">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_bill"
+                    android:layout_gravity="center"
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"/>
+            </FrameLayout>
+
+            <Button
+                android:fontFamily="@font/nunito_bold"
+                android:text="Checkout"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:id="@+id/button_checkout"
+                android:layout_width="112dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_order_buttoncheckoout"
+                android:layout_height="40dp"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include
+            android:visibility="gone"
+            layout="@layout/partial_progress"/>
+</android.support.constraint.ConstraintLayout>

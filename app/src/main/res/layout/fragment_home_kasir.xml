@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/layout_parent"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".kasir.home.HomeKasirFragment">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <View android:layout_width="match_parent"
+                  android:layout_height="185dp"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:background="@drawable/shape_home_header"/>
+            <ImageView android:layout_width="match_parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       android:adjustViewBounds="false"
+                       android:src="@drawable/background_header_home"
+                       android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp"
+                      android:id="@+id/text_morning"
+                      android:textSize="12sp"
+                      android:fontFamily="@font/nunito_regular"
+                      android:text="Welcome"
+                      android:textColor="#ededed"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginTop="33dp"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="0dp"
+                      android:id="@+id/text_nama"
+                      android:textSize="20sp"
+                      android:includeFontPadding="false"
+                      android:fontFamily="@font/nunito_extrabold"
+                      android:text="@string/loading"
+                      android:textColor="#ffffff"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginTop="4dp"
+                      app:layout_constraintTop_toBottomOf="@id/text_morning"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:ellipsize="end"
+                      android:maxLines="1"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_height="wrap_content"/>
+            <com.lijiankun24.shadowlayout.ShadowLayout
+                    android:id="@+id/a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_nama"
+                    app:shadowColor="#14000000"
+                    app:shadowDx="0dp"
+                    app:shadowDy="3dp"
+                    app:shadowRadius="15dp"
+                    app:shadowSide="all">
+                <android.support.constraint.ConstraintLayout
+                        android:background="@drawable/shape_home_header1"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp">
+
+                    <FrameLayout
+                            android:id="@+id/avatar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/a1"
+                            android:background="@drawable/shape_home_circle"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp">
+                        <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_shopper"
+                                android:layout_width="25dp"
+                                android:layout_height="23dp"/>
+                    </FrameLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/avatar"
+                            app:layout_constraintTop_toTopOf="@id/avatar"
+                            app:layout_constraintBottom_toBottomOf="@id/avatar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                        <TextView android:layout_width="match_parent"
+                                  android:id="@+id/text_namashop"
+                                  android:textSize="20sp"
+                                  android:fontFamily="@font/nunito_extrabold"
+                                  android:text="@string/loading"
+                                  android:includeFontPadding="false"
+                                  android:textColor="@color/textInputUser"
+                                  app:layout_constraintTop_toBottomOf="@id/text_morning"
+                                  app:layout_constraintStart_toStartOf="parent"
+                                  android:ellipsize="end"
+                                  android:maxLines="1"
+                                  app:layout_constraintEnd_toEndOf="parent"
+                                  android:layout_height="wrap_content"/>
+
+                        <TextView android:layout_width="match_parent"
+                                  android:id="@+id/text_address"
+                                  android:textSize="12sp"
+                                  android:fontFamily="@font/nunito_semibold"
+                                  android:text="@string/loading"
+                                  android:includeFontPadding="false"
+                                  android:textColor="#a3a3a3"
+                                  app:layout_constraintTop_toBottomOf="@id/text_morning"
+                                  app:layout_constraintStart_toStartOf="parent"
+                                  android:ellipsize="end"
+                                  android:maxLines="1"
+                                  app:layout_constraintEnd_toEndOf="parent"
+                                  android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent"
+                          android:id="@+id/a1"
+                          app:layout_constraintBottom_toBottomOf="parent"
+                          android:background="@drawable/shape_home_header2"
+                          android:layout_height="48dp"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:textSize="13sp"
+                              android:fontFamily="@font/nunito_bold"
+                              android:text="Sales Today"
+                              android:layout_marginStart="20dp"
+                              android:includeFontPadding="false"
+                              android:textColor="#797979"
+                              app:layout_constraintTop_toTopOf="@+id/a1"
+                              app:layout_constraintBottom_toBottomOf="parent"
+                              app:layout_constraintStart_toStartOf="parent"
+                              android:ellipsize="end"
+                              android:maxLines="1"
+                              android:layout_height="wrap_content"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:textSize="15sp"
+                              android:fontFamily="@font/nunito_extrabold"
+                              android:text="@string/loading"
+                              android:gravity="center_vertical"
+                              android:layout_marginEnd="10dp"
+                              android:includeFontPadding="false"
+                              android:textColor="#f9863d"
+                              app:layout_constraintTop_toTopOf="@+id/a1"
+                              app:layout_constraintBottom_toBottomOf="parent"
+                              app:layout_constraintEnd_toStartOf="@id/icon_arrow_right"
+                              android:ellipsize="end"
+                              android:id="@+id/text_salestoday"
+                              android:maxLines="1"
+                              android:layout_height="0dp"/>
+                    <ImageView android:layout_width="7dp"
+                               android:layout_marginBottom="2dp"
+                               android:id="@+id/icon_arrow_right"
+                               android:layout_marginEnd="20dp"
+                               app:layout_constraintEnd_toEndOf="parent"
+                               app:layout_constraintTop_toTopOf="@+id/a1"
+                               app:layout_constraintBottom_toBottomOf="parent"
+                               android:scaleType="fitXY"
+                               android:src="@drawable/ic_arrow_right"
+                               android:layout_height="12dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </com.lijiankun24.shadowlayout.ShadowLayout>
+
+            <TextView android:layout_width="0dp"
+                      android:id="@+id/a3"
+                      android:textSize="15sp"
+                      android:fontFamily="@font/nunito_extrabold"
+                      android:text="Best Selling Products"
+                      android:textColor="#535353"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginEnd="20dp"
+                      app:layout_constraintTop_toBottomOf="@id/a2"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:ellipsize="end"
+                      android:maxLines="1"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_height="wrap_content"/>
+            <android.support.v7.widget.RecyclerView
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/list_sellingproduct"
+                    app:layout_constraintTop_toBottomOf="@id/a3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="0dp"
+                      android:id="@+id/a4"
+                      android:textSize="15sp"
+                      android:fontFamily="@font/nunito_extrabold"
+                      android:text="Recent Transactions"
+                      android:textColor="#535353"
+                      android:layout_marginStart="20dp"
+                      android:layout_marginEnd="20dp"
+                      app:layout_constraintTop_toBottomOf="@id/list_sellingproduct"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:ellipsize="end"
+                      android:maxLines="1"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_height="wrap_content"/>
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_recenttransaction"
+                    app:layout_constraintTop_toBottomOf="@id/a4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+    <include
+        android:visibility="gone"
+        layout="@layout/partial_progress"/>
+</FrameLayout>

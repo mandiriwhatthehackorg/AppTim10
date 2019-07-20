@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.application.library.shadow.ShadowView
+            android:id="@+id/shadow_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:shadowColor="#14000000"
+            app:cornerRadius="12dp"
+            app:shadowMargin="15dp"
+            app:shadowRadius="14dp">
+        <android.support.v7.widget.CardView
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                    android:minWidth="123dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="111dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:src="@drawable/ic_rupiah"
+                    android:id="@+id/img_rupiah"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:id="@+id/text_price"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="180.0000"
+                    android:includeFontPadding="false"
+                    android:textColor="#fb7c2b"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </com.application.library.shadow.ShadowView>
+</FrameLayout>

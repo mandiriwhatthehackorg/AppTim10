@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".kasir.MainKasirActivity">
+    <FrameLayout
+            android:background="#ffffff"
+            android:id="@+id/framelayout_kasir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layout_menubottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_menubottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:paddingTop="3dp"
+            android:background="@drawable/shadow_bottombar"
+            android:layout_height="wrap_content">
+        <View
+
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_gravity="bottom"
+                app:layout_constraintTop_toTopOf="@id/bottomnavigation_kasir"
+              android:background="@android:color/white"
+              android:layout_height="0dp"/>
+        <android.support.design.widget.BottomNavigationView
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/bottomnavigation_kasir"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="116dp"
+                app:itemTextAppearanceActive="@style/navTextActive"
+                app:itemTextAppearanceInactive="@style/navTextInactive"
+                android:layout_height="wrap_content"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/menu_bottom_kasir"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageButton
+            android:id="@+id/button_order"
+            android:background="@drawable/background_button_jual"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_menu_penjualan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+</android.support.constraint.ConstraintLayout>
