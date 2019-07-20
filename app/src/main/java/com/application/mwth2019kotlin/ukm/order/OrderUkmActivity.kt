@@ -1,4 +1,4 @@
-package com.application.mwth2019kotlin.kasir.order
+package com.application.mwth2019kotlin.ukm.order
 
 import android.content.Intent
 import android.os.Bundle
@@ -20,7 +20,7 @@ import com.application.mwth2019kotlin.kasir.checkout.CheckoutActivity
 import kotlinx.android.synthetic.main.activity_order.*
 import kotlinx.android.synthetic.main.fragment_bottomsheet_order.*
 
-class OrderKasirActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKasirContract.Presenter>(),
+class OrderUkmActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKasirContract.Presenter>(),
     OrderKasirContract.ViewOrder{
 
 
@@ -178,9 +178,9 @@ class OrderKasirActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKa
     private fun initData(){
         page=0
         getCredential(this)?.let { loginData ->
-            getOperator(this)?.let {homeOperator ->
+            getOperatorUkm(this)?.let {homeOperator ->
                 mPresenter.loadOrderKasir(loginData.token,page.toString(),
-                    homeOperator.ukm_id,kategori,
+                    homeOperator.id.toString(),kategori,
                     homeOperator.id.toString()+"cart")
             }
 
@@ -193,7 +193,7 @@ class OrderKasirActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKa
     private fun initDataDetail(){
         pagedetail=0
         getCredential(this)?.let { loginData ->
-            getOperator(this)?.let {homeOperator ->
+            getOperatorUkm(this)?.let {homeOperator ->
                 mPresenter.loadOrderDetailKasir(loginData.token,pagedetail.toString(),
                     homeOperator.id.toString()+"cart")
             }
@@ -206,7 +206,7 @@ class OrderKasirActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKa
     private fun addToCart(position: Int,
                           text_qty: TextView, frame_plus: View, frame_minus: View){
         getCredential(this)?.let {loginData ->
-            getOperator(this)?.let { homeOperator ->
+            getOperatorUkm(this)?.let { homeOperator ->
                 mPresenter.loadOrderCartPlus(
                     position, text_qty, frame_plus, frame_minus,loginData.token,
                     homeOperator.id.toString()+"cart",
@@ -218,7 +218,7 @@ class OrderKasirActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKa
     private fun delToCart(position: Int,
                                  text_qty: TextView,frame_minus: View){
         getCredential(this)?.let {loginData ->
-            getOperator(this)?.let { homeOperator ->
+            getOperatorUkm(this)?.let { homeOperator ->
                 mPresenter.loadOrderCartMin(
                     position, text_qty, frame_minus,loginData.token,
                     homeOperator.id.toString()+"cart",
@@ -258,7 +258,7 @@ class OrderKasirActivity : BaseMvpActivity<OrderKasirContract.ViewOrder, OrderKa
     }
     private fun hapusCart(){
         getCredential(this)?.let {loginData->
-            getOperator(this)?.let {homeOperator ->
+            getOperatorUkm(this)?.let {homeOperator ->
                 mPresenter.loadClearCart(loginData.token,homeOperator.id.toString()+"cart")
             }
 

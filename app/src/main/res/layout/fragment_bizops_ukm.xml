@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+            android:id="@+id/layout_bizops"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/textMandiri"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+        <ImageView
+                android:layout_gravity="center_horizontal"
+                android:padding="14dp"
+                android:src="@drawable/logo_mandiri_white"
+                android:layout_width="wrap_content"
+                   android:layout_height="?actionBarSize"/>
+    </LinearLayout>
+    <ScrollView
+            app:layout_constraintTop_toBottomOf="@+id/layout_bizops"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:gravity="center_vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Alur Kas"
+                    android:textColor="@color/textMandiri"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:id="@+id/alurkas"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"/>
+            <View
+                    android:background="#ececec"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                  android:layout_height="0.5dp"/>
+
+            <TextView
+                    android:gravity="center_vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Credit Scoring"
+                    android:textColor="@color/textMandiri"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:id="@+id/kreditskoring"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"/>
+            <View
+                    android:background="#ececec"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+            <TextView
+                    android:gravity="center_vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Kalkulator PPH UMKM"
+                    android:textColor="@color/textMandiri"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:id="@+id/kalkulatorpph"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"/>
+            <View
+                    android:background="#ececec"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

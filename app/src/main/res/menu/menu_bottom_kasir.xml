@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/navigation_home_selector"
+        android:icon="@drawable/ic_navigation_product"
         android:title="@string/title_home" />
     <item
         android:id="@+id/navigation_transaksi"
-        android:icon="@drawable/navigation_transaksi_selector"
-        android:title="@string/title_transaksi" />
+        android:icon="@drawable/ic_navigation_transaksi"
+        android:title="" />
     <item
-        android:id="@+id/navigation_akun"
-        android:icon="@drawable/navigation_akun_selector"
-        android:title="@string/title_akun" />
+        android:id="@+id/navigation_report"
+        android:icon="@drawable/ic_navigation_report"
+        android:title="@string/title_laporan" />
 </menu>

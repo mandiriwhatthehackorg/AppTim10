@@ -1,4 +1,4 @@
-package com.application.mwth2019kotlin.ukm.report
+package com.application.mwth2019kotlin.ukm.portalkredit
 
 
 import android.os.Bundle
@@ -8,14 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.application.mwth2019kotlin.R
 
-class ReportFragment : Fragment() {
+class PortalKreditFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_report_ukm, container, false)
+        return inflater.inflate(R.layout.fragment_portalkredit_ukm, container, false)
     }
 
 

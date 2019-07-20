@@ -63,6 +63,14 @@ fun saveCredential(ctx: Context, data: LoginData){
     editor.putString("credential", json)
     editor.commit()
 }
+
+fun delCredential(ctx: Context){
+    val sharedPref: SharedPreferences = ctx.getSharedPreferences("simplepos", Context.MODE_PRIVATE)
+    val editor: SharedPreferences.Editor = sharedPref.edit()
+    editor.putString("credential", null)
+    editor.commit()
+}
+
 fun getCredential(ctx:Context):LoginData?{
     val sharedPref: SharedPreferences = ctx.getSharedPreferences("simplepos", Context.MODE_PRIVATE)
     sharedPref.getString("credential", null)?.let {

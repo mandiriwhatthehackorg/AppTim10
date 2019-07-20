@@ -14,6 +14,8 @@ import com.application.mwth2019kotlin.kasir.MainKasirActivity
 import com.application.mwth2019kotlin.kasir.invoice.KasirInvoiceActivity
 import kotlinx.android.synthetic.main.fragment_home_kasir.view.*
 import java.util.ArrayList
+import android.support.v7.app.AlertDialog
+import com.application.mwth2019kotlin.login.LoginActivity
 
 
 /**
@@ -31,7 +33,6 @@ class HomeKasirFragment : BaseMvpFragment<HomeKasirContract.View, HomeKasirContr
         progressLayout.hideView()
         adapterBestSellerProduct.setDatas(homeResponse.message.best_selling)
         adapterRecentTransaction.setDatas(homeResponse.message.recent_transaction)
-        viewparent.text_nama.text=homeResponse.message.operator.username
         viewparent.text_salestoday.text=homeResponse.message.sale_today.toString().formatRupiah()
         viewparent.text_namashop.text=homeResponse.message.operator.ukm.name
         viewparent.text_address.text=homeResponse.message.operator.ukm.address
@@ -70,6 +71,36 @@ class HomeKasirFragment : BaseMvpFragment<HomeKasirContract.View, HomeKasirContr
             getCredential(ctx)?.let {logindata->
                 mPresenter.loadHomeKasir(logindata.token)
             }
+        }
+        viewparent.avatar.setOnClickListener {
+            ctx?.let {ctx->
+                val alertDialogBuilder = AlertDialog.Builder(ctx)
+
+                // set title dialog
+                alertDialogBuilder.setTitle("Keluar dari aplikasi.")
+
+                // set pesan dari dialog
+                alertDialogBuilder
+                    .setMessage("Anda yakin ingin keluar dari aplikasi?")
+                    .setCancelable(false)
+                    .setPositiveButton("Ya") { _, _ ->
+                        delCredential(ctx)
+                        val intent = Intent(ctx, LoginActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                    }
+                    .setNegativeButton("Tidak") { dialog, _ ->
+                        // jika tombol ini diklik, akan menutup dialog
+                        // dan tidak terjadi apa2
+                        dialog.cancel()
+                    }
+
+                // membuat alert dialog dari builder
+                val alertDialog = alertDialogBuilder.create()
+                alertDialog.show()
+                // menampilkan alert dialog
+            }
+
         }
     }
     override fun onCreateView(

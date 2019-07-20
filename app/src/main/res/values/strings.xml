@@ -1,15 +1,19 @@
 <resources>
     <string name="app_name">SimplePOS</string>
-    <string name="title_home">Home</string>
-    <string name="title_transaksi">Transaction</string>
-    <string name="title_akun">Account</string>
+    <string name="title_home">Product</string>
+    <string name="title_transaksi">Transaksi</string>
+    <string name="title_laporan">Laporan</string>
 
     <string name="str_error_connection">Internet connection unavailable</string>
     <string name="str_server_error">Server error</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="loading">loading</string>
+    <string name="loading1">loading</string>
     <string name="title_product">Product</string>
     <string name="title_kasir">Cashier</string>
     <string name="title_report">Report</string>
+    <string name="title_ukm1">BizOps</string>
+    <string name="title_ukm2">Produk</string>
+    <string name="title_ukm4">Riwayat</string>
+    <string name="title_ukm5">Kredit</string>
 </resources>

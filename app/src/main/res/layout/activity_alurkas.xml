@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ukm.bizops.AlurkasActivity">
+    <LinearLayout
+            android:id="@+id/layout_bizops"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/textMandiri"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+        <ImageView
+                android:layout_marginStart="12dp"
+                android:id="@+id/ic_back"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/layout_bizops"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"/>
+        <TextView
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/nunito_extrabold"
+                android:textColor="#FFB700"
+                android:textSize="18sp"
+                android:id="@+id/text_alurkas"
+                android:text="Alur Kas"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                  android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/layout_datepicker"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_bizops"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:background="@drawable/background_input_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    app:hintEnabled="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="48dp">
+                <android.support.design.widget.TextInputEditText
+                        android:hint="Dari tanggal"
+                        android:id="@+id/textinput_dari"
+                        android:fontFamily="@font/nunito_regular"
+                        android:inputType="text"
+                        android:textColor="@color/textInputUser1"
+                        android:background="@android:color/transparent"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView android:layout_width="32dp"
+                       android:layout_alignParentEnd="true"
+                       android:padding="6dp"
+                       android:layout_marginEnd="8dp"
+                       android:layout_centerVertical="true"
+                       android:tint="@color/textInputUser1"
+                       android:src="@drawable/ic_calendar"
+                       android:layout_marginStart="8dp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_height="32dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_marginStart="6dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:background="@drawable/background_input_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    app:hintEnabled="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="48dp">
+                <android.support.design.widget.TextInputEditText
+                        android:hint="Sampai Tanggal"
+                        android:id="@+id/textinput_username"
+                        android:fontFamily="@font/nunito_regular"
+                        android:inputType="text"
+                        android:textColor="@color/textInputUser1"
+                        android:background="@android:color/transparent"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView android:layout_width="32dp"
+                       android:padding="6dp"
+                       android:layout_marginEnd="8dp"
+                       android:layout_alignParentEnd="true"
+                       android:layout_centerVertical="true"
+                       android:tint="@color/textInputUser1"
+                       android:src="@drawable/ic_calendar"
+                       android:layout_marginStart="8dp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_height="32dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_datepicker"
+            android:id="@+id/button_filter"
+            android:background="@drawable/background_button_login"
+            android:textAllCaps="false"
+            android:text="Filter"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+    <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            app:layout_constraintTop_toBottomOf="@id/button_filter"
+            android:layout_width="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TabItem
+                android:id="@+id/tab1"
+                android:text="Kas Masuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <android.support.design.widget.TabItem
+                android:id="@+id/tab2"
+                android:text="Kas KELUAR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_kas"
+            app:layout_constraintTop_toBottomOf="@id/tablayout"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"/>
+    <android.support.design.widget.FloatingActionButton
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="32dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_plus"
+            app:backgroundTint="@color/textMandiri"
+            android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>

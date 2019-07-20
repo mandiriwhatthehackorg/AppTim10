@@ -103,7 +103,7 @@
                             android:ellipsize="end"
                             android:includeFontPadding="false"
                             android:textColor="#fb7c2b"
-                            android:text="@string/loading"
+                            android:text="@string/loading1"
                             android:fontFamily="@font/nunito_bold"
                             android:layout_marginTop="13dp"
                             android:layout_marginStart="15dp"

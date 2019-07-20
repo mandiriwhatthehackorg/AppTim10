@@ -19,10 +19,10 @@ class MainKasirActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
                 supportFragmentManager.beginTransaction().replace(R.id.framelayout_kasir, HomeKasirFragment()).commitAllowingStateLoss()
             }
             R.id.navigation_transaksi->{
-                supportFragmentManager.beginTransaction().replace(R.id.framelayout_kasir, TransaksiKasirFragment()).commitAllowingStateLoss()
-            }
-            R.id.navigation_akun->{
 
+            }
+            R.id.navigation_report->{
+                supportFragmentManager.beginTransaction().replace(R.id.framelayout_kasir, TransaksiKasirFragment()).commitAllowingStateLoss()
             }
         }
         return true
@@ -31,8 +31,6 @@ class MainKasirActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kasir_home)
-        bottomnavigation_kasir.itemIconTintList=null
-        bottomnavigation_kasir.disableShiftMode()
         supportFragmentManager.beginTransaction().replace(R.id.framelayout_kasir, HomeKasirFragment()).commitAllowingStateLoss()
     }
 

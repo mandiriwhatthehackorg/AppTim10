@@ -12,10 +12,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="navTextActive">
+    <style name="navTextActive1">
         <item name="android:textSize">12sp</item>
     </style>
-    <style name="navTextInactive">
+    <style name="navTextInactive1">
         <item name="android:textSize">12sp</item>
     </style>
 </resources>

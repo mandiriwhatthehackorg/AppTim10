@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/navigation_home_selector"
-        android:title="@string/title_home" />
+        android:id="@+id/navigation_ukm1"
+        android:icon="@drawable/ic_ukm1"
+        android:title="@string/title_ukm1" />
     <item
-        android:id="@+id/navigation_transaksi"
-        android:icon="@drawable/navigation_transaksi_selector"
-        android:title="@string/title_transaksi" />
+            android:id="@+id/navigation_ukm2"
+            android:icon="@drawable/ic_ukm2"
+            android:title="@string/title_ukm2" />
     <item
-        android:id="@+id/navigation_product"
-        android:icon="@drawable/navigation_product_selector"
-        android:title="@string/title_product" />
+            android:title=""
+            android:id="@+id/navigation_ukm3"
+            android:icon="@drawable/ic_ukm1" />
     <item
-            android:id="@+id/navigation_kasir"
-            android:icon="@drawable/navigation_kasir_selector"
-            android:title="@string/title_kasir" />
+            android:id="@+id/navigation_ukm4"
+            android:icon="@drawable/ic_ukm4"
+            android:title="@string/title_ukm4" />
     <item
-            android:id="@+id/navigation_report"
-            android:icon="@drawable/navigation_report_selector"
-            android:title="@string/title_report" />
+            android:id="@+id/navigation_ukm5"
+            android:icon="@drawable/ic_ukm5"
+            android:title="@string/title_ukm5" />
 </menu>
