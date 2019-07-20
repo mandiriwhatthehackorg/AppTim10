@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="120dp"
+                    android:layout_height="140dp">
+                <TextView
+                        android:text="Foto Selfie"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/textMandiri"
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                          android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="match_parent"
+                           android:scaleType="centerInside"
+                           android:src="@drawable/ic_username"
+                           android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                <TextView
+                        android:text="Foto KTP"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/textMandiri"
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="match_parent"
+                           android:scaleType="centerInside"
+                           android:src="@drawable/ic_username"
+                           android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -21,6 +21,7 @@
         <activity android:name=".ukm.product.add.ProductAddActivity"/>
         <activity android:name=".login.LoginActivity"/>
         <activity android:name=".register.RegisterActivity"/>
+        <activity android:name=".register.OnboardingActivity"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
