@@ -92,7 +92,7 @@
                       android:text="All"
                       android:layout_gravity="center_vertical"
                       android:includeFontPadding="false"
-                      android:textColor="@color/textInputUser"
+                      android:textColor="@color/textInputUser1"
                       android:ellipsize="end"
                       android:maxLines="1"
                       android:layout_height="wrap_content"/>

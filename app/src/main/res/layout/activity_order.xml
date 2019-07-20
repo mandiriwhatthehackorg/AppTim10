@@ -82,7 +82,7 @@
                       android:text="All"
                       android:layout_gravity="center_vertical"
                       android:includeFontPadding="false"
-                      android:textColor="@color/textInputUser"
+                      android:textColor="@color/textInputUser1"
                       android:ellipsize="end"
                       android:maxLines="1"
                       android:layout_height="wrap_content"/>
@@ -140,7 +140,7 @@
                 android:text="@string/loading"
                 android:layout_marginStart="20dp"
                 android:includeFontPadding="false"
-                android:textColor="@color/textInputUser"
+                android:textColor="@color/textInputUser1"
                 android:ellipsize="end"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintStart_toStartOf="parent"

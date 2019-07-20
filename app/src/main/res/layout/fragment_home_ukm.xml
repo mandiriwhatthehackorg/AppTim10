@@ -82,7 +82,7 @@
                                   android:fontFamily="@font/nunito_extrabold"
                                   android:text="@string/loading"
                                   android:includeFontPadding="false"
-                                  android:textColor="@color/textInputUser"
+                                  android:textColor="@color/textInputUser1"
                                   app:layout_constraintTop_toBottomOf="@id/text_morning"
                                   app:layout_constraintStart_toStartOf="parent"
                                   android:ellipsize="end"

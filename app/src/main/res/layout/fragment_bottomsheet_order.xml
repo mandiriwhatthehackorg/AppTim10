@@ -42,7 +42,7 @@
                     android:fontFamily="@font/nunito_bold"
                     android:text="Your Basket"
                     android:includeFontPadding="false"
-                    android:textColor="@color/textInputUser"
+                    android:textColor="@color/textInputUser1"
                     android:ellipsize="end"
                     android:layout_marginStart="20dp"
                     app:layout_constraintStart_toStartOf="parent"
