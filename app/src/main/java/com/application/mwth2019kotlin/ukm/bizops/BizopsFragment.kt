@@ -19,8 +19,14 @@ class BizopsFragment : Fragment() {
                 val intent= Intent(ctx,AlurkasActivity::class.java)
                 startActivity(intent)
             }
-
         }
+        view.kreditskoring.setOnClickListener {
+            context?.let {ctx->
+                val intent= Intent(ctx,KreditSkoringActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

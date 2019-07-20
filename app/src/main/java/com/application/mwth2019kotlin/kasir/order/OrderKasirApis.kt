@@ -68,7 +68,7 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
         val modelBestSellerProduct=ModelBestSellerProduct(1,
             "1","1","Sate","10",
             "10000","0.5","15000",
-            "placeholder","description","aktif","2019-19-19 10:00:00",
+            "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sate_Ponorogo.jpg","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
         val orderDetailKasirCart=OrderDetailKasirCart(1,
             "1","1","1","2019-19-19 10:00:00",
@@ -83,7 +83,7 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
         val modelBestSellerProduct=ModelBestSellerProduct(1,
             "1","1","Sate","10",
             "10000","0.5","15000",
-            "placeholder","description","aktif","2019-19-19 10:00:00",
+            "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sate_Ponorogo.jpg","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
         val orderDetailKasirCart=OrderDetailKasirCart(1,
             "1","1","1","2019-19-19 10:00:00",
@@ -101,7 +101,7 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
                     1,
                     "1","1","Sate","10",
                     "10000","0.5","15000",
-                    "placeholder","description","aktif","2019-19-19 10:00:00",
+                    "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sate_Ponorogo.jpg","description","aktif","2019-19-19 10:00:00",
                     "2019-19-19 10:00:00","20",0
                 )))
         listOrderDetailKasirCart.add(
@@ -110,7 +110,7 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
                     2,
                     "2","1","Nasi Goreng","10",
                     "10000","0.5","15000",
-                    "placeholder","description","aktif","2019-19-19 10:00:00",
+                    "https://i2.wp.com/resepkoki.id/wp-content/uploads/2018/01/Resep-Nasi-Goreng-Rendang.jpg","description","aktif","2019-19-19 10:00:00",
                     "2019-19-19 10:00:00","20",0
                 )))
         listOrderDetailKasirCart.add(
@@ -119,7 +119,7 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
                     3,
                     "3","1","Soto","10",
                     "10000","0.5","15000",
-                    "placeholder","description","aktif","2019-19-19 10:00:00",
+                    "https://doyanresep.com/wp-content/uploads/2016/06/resep-soto-lamongan-1.jpg","description","aktif","2019-19-19 10:00:00",
                     "2019-19-19 10:00:00","20",0
                 )))
         val orderDetailKasirMessage=OrderDetailKasirMessage("0",listOrderDetailKasirCart,100000)
@@ -133,23 +133,23 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
         val modelBestSellerProduct1=ModelBestSellerProduct(1,
             "1","1","Sate","10",
             "10000","0.5","15000",
-            "placeholder","description","aktif","2019-19-19 10:00:00",
+            "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sate_Ponorogo.jpg","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
         listModelBestSellerProduct.add(modelBestSellerProduct1)
         val modelBestSellerProduct2=ModelBestSellerProduct(2,
             "2","1","Nasi Goreng","10",
             "10000","0.5","15000",
-            "placeholder","description","aktif","2019-19-19 10:00:00",
+            "https://i2.wp.com/resepkoki.id/wp-content/uploads/2018/01/Resep-Nasi-Goreng-Rendang.jpg","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
         listModelBestSellerProduct.add(modelBestSellerProduct2)
         val modelBestSellerProduct3=ModelBestSellerProduct(3,
             "3","1","Soto","10",
             "10000","0.5","15000",
-            "placeholder","description","aktif","2019-19-19 10:00:00",
+            "https://doyanresep.com/wp-content/uploads/2016/06/resep-soto-lamongan-1.jpg","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
         listModelBestSellerProduct.add(modelBestSellerProduct3)
         val modelBestSellerProduct4=ModelBestSellerProduct(4,
-            "4","1","Bubur ayam","10",
+            "4","1","https://upload.wikimedia.org/wikipedia/commons/a/a8/Bubur_ayam_chicken_porridge.JPG","10",
             "10000","0.5","15000",
             "placeholder","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
@@ -157,7 +157,7 @@ class OrderKasirPresenter: BaseMvpPresenterImpl<OrderKasirContract.ViewOrder>(),
         val modelBestSellerProduct5=ModelBestSellerProduct(5,
             "5","1","Rawon","10",
             "10000","0.5","15000",
-            "placeholder","description","aktif","2019-19-19 10:00:00",
+            "https://selerasa.com/wp-content/uploads/2018/11/rawon-daging-bumbu-instan-500x375.jpg","description","aktif","2019-19-19 10:00:00",
             "2019-19-19 10:00:00","20",0)
         listModelBestSellerProduct.add(modelBestSellerProduct5)
 

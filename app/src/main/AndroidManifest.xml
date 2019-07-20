@@ -22,6 +22,7 @@
         <activity android:name=".login.LoginActivity"/>
         <activity android:name=".register.RegisterActivity"/>
         <activity android:name=".register.OnboardingActivity"/>
+        <activity android:name=".ukm.bizops.KreditSkoringActivity"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
