@@ -42,9 +42,10 @@ class MainUkmActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIt
         button_order.setOnClickListener {
             startActivity(Intent(this, OrderUkmActivity::class.java))
         }
+
     }
     fun onCreate(){
-        bottomnavigation_ukm.selectedItemId=-1
+        bottomnavigation_ukm.selectedItemId= -1
         bottomnavigation_ukm.setOnNavigationItemSelectedListener(this)
     }
 }

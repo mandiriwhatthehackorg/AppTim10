@@ -1,13 +1,16 @@
 package com.application.mwth2019kotlin.ukm.home
 
 
+import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.application.mwth2019kotlin.*
 import com.application.mwth2019kotlin.basemvp.BaseMvpFragment
+import com.application.mwth2019kotlin.login.LoginActivity
 import com.application.mwth2019kotlin.ukm.MainUkmActivity
 import kotlinx.android.synthetic.main.fragment_home_ukm.view.*
 import java.util.*
@@ -48,6 +51,35 @@ class HomeUkmFragment : BaseMvpFragment<HomeUkmContract.View, HomeUkmContract.Pr
                 mPresenter.loadHomeUkm(logindata.token)
             }
         }
+        viewparent.avatar.setOnClickListener {
+            ctx?.let {ctx->
+                val alertDialogBuilder = AlertDialog.Builder(ctx)
+
+                // set title dialog
+                alertDialogBuilder.setTitle("Keluar dari aplikasi.")
+
+                // set pesan dari dialog
+                alertDialogBuilder
+                    .setMessage("Anda yakin ingin keluar dari aplikasi?")
+                    .setCancelable(false)
+                    .setPositiveButton("Ya") { _, _ ->
+                        delCredential(ctx)
+                        val intent = Intent(ctx, LoginActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                    }
+                    .setNegativeButton("Tidak") { dialog, _ ->
+                        // jika tombol ini diklik, akan menutup dialog
+                        // dan tidak terjadi apa2
+                        dialog.cancel()
+                    }
+
+                // membuat alert dialog dari builder
+                val alertDialog = alertDialogBuilder.create()
+                alertDialog.show()
+            }
+        }
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

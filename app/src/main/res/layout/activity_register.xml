@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#ffffff">
+    <ImageView
+            android:id="@+id/image_logo"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:src="@drawable/logo_mandiri_color"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/text_deskripsi"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/image_logo"
+            android:textColor="@color/textMandiri"
+            android:layout_marginTop="16dp"
+            android:text="Jika anda belum menjadi Nasabah Mandiri Silahkan Klik Tombol dibawah ini"
+            android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+    <Button
+            app:layout_constraintTop_toBottomOf="@id/text_deskripsi"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:id="@+id/button_nasabahbaru"
+            android:background="@drawable/background_button_login"
+            android:textAllCaps="false"
+            android:text="Nasabah Baru"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"/>
+
+    <View android:layout_width="match_parent"
+          android:id="@+id/view_line"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginTop="16dp"
+          app:layout_constraintTop_toBottomOf="@id/button_nasabahbaru"
+          android:background="@color/textMandiri"
+          android:layout_height="1dp"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/view_line">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:hintEnabled="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="48dp">
+                    <android.support.design.widget.TextInputEditText
+                            android:hint="ID Banking"
+                            android:fontFamily="@font/nunito_regular"
+                            android:inputType="text"
+                            android:textColor="@color/textInputUser1"
+                            android:background="@android:color/transparent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:hintEnabled="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="48dp">
+                    <android.support.design.widget.TextInputEditText
+                            android:hint="ID KTP"
+                            android:fontFamily="@font/nunito_regular"
+                            android:inputType="text"
+                            android:textColor="@color/textInputUser1"
+                            android:background="@android:color/transparent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:hintEnabled="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="48dp">
+                    <android.support.design.widget.TextInputEditText
+                            android:hint="ID Banking"
+                            android:fontFamily="@font/nunito_regular"
+                            android:inputType="text"
+                            android:textColor="@color/textInputUser1"
+                            android:background="@android:color/transparent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:hintEnabled="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="48dp">
+                    <android.support.design.widget.TextInputEditText
+                            android:hint="Username"
+                            android:fontFamily="@font/nunito_regular"
+                            android:inputType="text"
+                            android:textColor="@color/textInputUser1"
+                            android:background="@android:color/transparent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        app:hintEnabled="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="48dp">
+                    <android.support.design.widget.TextInputEditText
+                            android:hint="Handphone"
+                            android:fontFamily="@font/nunito_regular"
+                            android:inputType="text"
+                            android:textColor="@color/textInputUser1"
+                            android:background="@android:color/transparent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:background="@drawable/background_input_username"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+
+                        app:hintEnabled="false"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        app:passwordToggleEnabled="true"
+                        android:gravity="center_vertical"
+                        android:layout_height="48dp">
+                    <android.support.design.widget.TextInputEditText
+                            android:id="@+id/textinput_password"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textColor="@color/textInputUser1"
+                            android:background="@android:color/transparent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+            android:id="@+id/layout_daftar"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/button_kembali"
+                android:background="@drawable/background_button_login_outline"
+                android:textAllCaps="false"
+                android:text="Kembali"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/textMandiri"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+        <Button
+                android:id="@+id/button_login"
+                android:background="@drawable/background_button_login"
+                android:textAllCaps="false"
+                android:text="Daftar"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

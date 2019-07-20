@@ -6,6 +6,7 @@ import com.application.mwth2019kotlin.basemvp.BaseMvpActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import android.content.Intent
 import com.application.mwth2019kotlin.kasir.MainKasirActivity
+import com.application.mwth2019kotlin.register.RegisterActivity
 import com.application.mwth2019kotlin.ukm.MainUkmActivity
 
 
@@ -38,6 +39,10 @@ class LoginActivity : BaseMvpActivity<LoginContract.View, LoginContract.Presente
         button_login.setOnClickListener {
             mPresenter.loginMember(textinput_username.text.toString(),
                 textinput_password.text.toString())
+        }
+        button_daftar.setOnClickListener {
+            val intent=Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
